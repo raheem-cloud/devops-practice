@@ -2,28 +2,30 @@ pipeline {
     agent any
 
     stages {
+
         stage('Clone Repository') {
             steps {
-                echo 'Repository cloned successfully'
+                git 'https://github.com/raheem-cloud/devops-practice.git'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building application...'
+                echo "Building the project..."
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                echo "Running tests..."
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
+                echo "Deploying application..."
             }
         }
+
     }
 }
